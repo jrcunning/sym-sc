@@ -12,9 +12,9 @@ counts <- data.frame(matrix(nrow=nrow(dat.all),ncol=3))
 rownames(counts) <- dat.all$Group
 colnames(counts) <- c("Smic","SymB","Skaw")
 
-counts$Smic <- apply(dat5,1,function(x) str_count(x[4],"Smic.genome.annotation.pep.longest"))
-counts$SymB <- apply(dat5,1,function(x) str_count(x[4],"symbB.v1.2.augustus.prot"))
-counts$Skaw <- apply(dat5,1,function(x) str_count(x[4],"Symbiodinium_kawagutii.0819.final.gene"))
+counts$Smic <- apply(dat.all,1,function(x) str_count(x[4],"Smic.genome.annotation.pep.longest"))
+counts$SymB <- apply(dat.all,1,function(x) str_count(x[4],"symbB.v1.2.augustus.prot"))
+counts$Skaw <- apply(dat.all,1,function(x) str_count(x[4],"Symbiodinium_kawagutii.0819.final.gene"))
 
 # Find groups with a single occurrence in each genome (purported single copy loci)
 sc <- counts[which(rowSums(counts)==3), ]
