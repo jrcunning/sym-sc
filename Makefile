@@ -1,4 +1,11 @@
-all: sc_orthos/allsym_sc.fasta
+all: $(addsuffix .aln, $(basename $(wildcard sc_orthos/each/*.fasta)))
+
+sc_orthos/each/%.aln: sc_orthos/each/%.fasta
+	#mafft --adjustdirection $< > $@
+	muscle -in $< -out $@
+
+sc_orthos/each/ORTHOMCL5562.fasta: sc_orthos/allsym_sc.fasta R/write_each_sc_fasta.R
+	R --vanilla < R/write_each_sc_fasta.R
 
 sc_orthos/allsym_sc.fasta: sc_orthos/Skaw_sc.fasta sc_orthos/SymB_sc.fasta sc_orthos/Smic_sc.fasta sc_orthos/Sgor_sc.fasta
 	cat $^ > $@
