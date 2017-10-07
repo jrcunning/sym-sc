@@ -1,8 +1,7 @@
-all: $(addsuffix .aln, $(basename $(wildcard sc_orthos/each/*.fasta)))
+all: $(addsuffix .consensus, $(basename $(wildcard sc_orthos/each/*.fasta)))
 
-sc_orthos/each/%.aln: sc_orthos/each/%.fasta
-	#mafft --adjustdirection $< > $@
-	muscle -in $< -out $@
+sc_orthos/each/%.consensus: sc_orthos/each/%.fasta
+	R --vanilla < R/msa_consensus.R --args $^
 
 sc_orthos/each/ORTHOMCL5562.fasta: sc_orthos/allsym_sc.fasta R/write_each_sc_fasta.R
 	R --vanilla < R/write_each_sc_fasta.R
