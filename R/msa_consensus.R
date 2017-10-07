@@ -1,8 +1,5 @@
 library(Biostrings)
 library(msa)
-library(foreach)
-library(parallel)
-library(doParallel)
 
 #for (fasta in list.files("sc_orthos/each", pattern="[0-9].fasta", full.names=T)) {
 #  seqs <- readDNAStringSet(fasta)
