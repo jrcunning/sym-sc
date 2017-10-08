@@ -3,3 +3,7 @@
 .RData
 .Ruserdata
 fastOrtho_out/sym_ortho*
+
+data/genomes/SymbC1.Genome.Scaffolds.fasta
+data/genomes/SymbF.Genome.Scaffolds.fasta
+data/genomes/all_genomes.fasta
