@@ -1,0 +1,107 @@
+
+name = ORTHOMCL7067
+forward primer = 5'-GAGAACAACGACAAGTTCGC-3'
+reverse primer = 5'-TTGTAGTTGAAGCCCATGGA-3'
+forward primer tm = 57.4062
+reverse primer tm = 56.6044
+forward primer hairpin tm = 44.6406
+reverse primer hairpin tm = 23.2741
+forward primer homodimer tm = 0
+reverse primer homodimer tm = 0
+heterodimer tm = 1.62042
+forward primer dG[-18.5436] = dH[-161.4] - T*dS[-0.460604]
+reverse primer dG[-17.5035] = dH[-150.1] - T*dS[-0.427524]
+forward primer mismatches = 0
+reverse primer mismatches = 0
+forward primer gaps = 0
+reverse primer gaps = 0
+min 3' clamp = 20
+max 3' clamp = 20
+forward primer %GC = 50
+reverse primer %GC = 45
+forward primer heuristics = NO_POLY_RUNS
+reverse primer heuristics = PCR_VALID
+amplicon range = 33363 .. 33478
+amplicon length = 116
+forward primer align 5' GAGAACAACGACAAGTTCGC 3'
+forward primer align    ||||||||||||||||||||
+forward primer align 3' CTCTTGTTGCTGTTCAAGCG 5'
+forward primer align dimer alignment size = 20
+reverse primer align 5' TTGTAGTTGAAGCCCATGGA 3'
+reverse primer align    ||||||||||||||||||||
+reverse primer align 3' AACATCAACTTCGGGTACCT 5'
+reverse primer align dimer alignment size = 20
+>SymbC1.scaffold3018
+GAGAACAACGACAAGTTCGCGGTGGATCGCAGCCTCAATGCAGATCCTCGGCCCGGGGACGTGGCCGTGATCCACGACAGCGGTGCCCATGGCCATTCCATGGGCTTCAACTACAA
+
+name = ORTHOMCL7067
+forward primer = 5'-GAGAACAACGACAAGTTCGC-3'
+reverse primer = 5'-TTGTAGTTGAAGCCCATGGA-3'
+forward primer tm = 57.4062
+reverse primer tm = 56.6044
+forward primer hairpin tm = 44.6406
+reverse primer hairpin tm = 23.2741
+forward primer homodimer tm = 0
+reverse primer homodimer tm = 0
+heterodimer tm = 1.62042
+forward primer dG[-18.5436] = dH[-161.4] - T*dS[-0.460604]
+reverse primer dG[-17.5035] = dH[-150.1] - T*dS[-0.427524]
+forward primer mismatches = 0
+reverse primer mismatches = 0
+forward primer gaps = 0
+reverse primer gaps = 0
+min 3' clamp = 20
+max 3' clamp = 20
+forward primer %GC = 50
+reverse primer %GC = 45
+forward primer heuristics = NO_POLY_RUNS
+reverse primer heuristics = PCR_VALID
+amplicon range = 169445 .. 169560
+amplicon length = 116
+forward primer align 5' GAGAACAACGACAAGTTCGC 3'
+forward primer align    ||||||||||||||||||||
+forward primer align 3' CTCTTGTTGCTGTTCAAGCG 5'
+forward primer align dimer alignment size = 20
+reverse primer align 5' TTGTAGTTGAAGCCCATGGA 3'
+reverse primer align    ||||||||||||||||||||
+reverse primer align 3' AACATCAACTTCGGGTACCT 5'
+reverse primer align dimer alignment size = 20
+>SymbF.scaffold53
+GAGAACAACGACAAGTTCGCCGTGGACCGGAGCCTCAATGCAGATCCACGGCCCGGGGATGTGGCGGTGATCCACGACAGCGGGGCCCATGGCCACTCCATGGGCTTCAACTACAA
+
+name = ORTHOMCL7067
+forward primer = 5'-GAGAACAACGACAAGTTCGC-3'
+reverse primer = 5'-TTGTAGTTGAAGCCCATGGA-3'
+forward primer tm = 57.4062
+reverse primer tm = 56.6044
+forward primer hairpin tm = 44.6406
+reverse primer hairpin tm = 23.2741
+forward primer homodimer tm = 0
+reverse primer homodimer tm = 0
+heterodimer tm = 1.62042
+forward primer dG[-18.5436] = dH[-161.4] - T*dS[-0.460604]
+reverse primer dG[-17.5035] = dH[-150.1] - T*dS[-0.427524]
+forward primer mismatches = 0
+reverse primer mismatches = 0
+forward primer gaps = 0
+reverse primer gaps = 0
+min 3' clamp = 20
+max 3' clamp = 20
+forward primer %GC = 50
+reverse primer %GC = 45
+forward primer heuristics = NO_POLY_RUNS
+reverse primer heuristics = PCR_VALID
+amplicon range = 52459 .. 52574
+amplicon length = 116
+forward primer align 5' GAGAACAACGACAAGTTCGC 3'
+forward primer align    ||||||||||||||||||||
+forward primer align 3' CTCTTGTTGCTGTTCAAGCG 5'
+forward primer align dimer alignment size = 20
+reverse primer align 5' TTGTAGTTGAAGCCCATGGA 3'
+reverse primer align    ||||||||||||||||||||
+reverse primer align 3' AACATCAACTTCGGGTACCT 5'
+reverse primer align dimer alignment size = 20
+>scaffold3390.1|size57886
+GAGAACAACGACAAGTTCGCCGTAGATCGTAGCCTCAATGCTGATCCTCGGCCTGGTGATGTGGCGGTGATCCATGACAGTGGTGCCCATGGTCATTCCATGGGCTTCAACTACAA
+
+

@@ -1,0 +1,1 @@
+tntblast output parsed into individual records (*_pcr.out)

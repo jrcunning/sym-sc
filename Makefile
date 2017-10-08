@@ -1,4 +1,27 @@
-all: $(addsuffix .consensus, $(basename $(wildcard sc_orthos/each/*.fasta)))
+all: cand_loci/pcr/sc_in_genomes/log.txt
+#$(addsuffix .consensus, $(basename $(wildcard sc_orthos/each/*.fasta)))
+
+cand_loci/pcr/sc_in_genomes/log.txt: cand_loci/pcr/log.txt
+	grep -l '>SymbC' cand_loci/pcr/ORTHO* | xargs grep -l '>Smic' | xargs grep -l '>SymbF' | xargs grep -l '>scaffold' > cand_loci/pcr/all4.txt
+	while read -r p; do \
+		if [ "$$(grep -c '>' $$p)" = 4 ] ; then cp $$p cand_loci/pcr/sc_in_genomes ; echo "assays in this directory produced a single amplicon in all four Symbiodinium genomes" > cand_loci/pcr/sc_in_genomes/log.txt ; fi \
+	done < cand_loci/pcr/all4.txt
+	rm -f cand_loci/pcr/all4.txt
+
+cand_loci/pcr/log.txt: cand_loci/pcr/tnt.out
+	cat cand_loci/pcr/tnt.out | awk -v RS="#+" 'NR > 1 { print $$0 > "tnt" NR-1 }'
+	for f in tnt[0-9]*; do mv $$f cand_loci/pcr/$$(grep -o -m1 ORTHOMCL.* $$f)_pcr.out; done
+	echo "tntblast output parsed into individual records (*_pcr.out)" > cand_loci/pcr/log.txt
+
+cand_loci/pcr/tnt.out: cand_loci/pcr/assays.txt
+	tntblast -i $< -e 50 --max-mismatch 3 -o $@ -d data/genomes/all_genomes.fasta
+
+cand_loci/pcr/assays.txt: cand_loci/all_candidates.fasta R/make_assay.R
+	R --vanilla < R/make_assay.R
+
+cand_loci/all_candidates.fasta: $(wildcard sc_orthos/each/*.consensus)
+	R --vanilla < R/cand_loci.R
+	cat cand_loci/*.region > cand_loci/all_candidates.fasta
 
 sc_orthos/each/%.consensus: sc_orthos/each/%.fasta
 	R --vanilla < R/msa_consensus.R --args $^
